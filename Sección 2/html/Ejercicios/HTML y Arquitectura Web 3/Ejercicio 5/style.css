@@ -1,0 +1,20 @@
+.headerBox{
+    background-color: rgb(34, 34, 34);   
+}
+
+.headerBox-menu{
+    display: flex;
+    justify-content: space-evenly;  
+}
+
+.headerBox-menu-list{
+    display: flex;
+    gap: 20px;
+    list-style: none; 
+}
+
+
+.headerBox-menu-list__enlace{
+   text-decoration: none;
+    color: white;
+}

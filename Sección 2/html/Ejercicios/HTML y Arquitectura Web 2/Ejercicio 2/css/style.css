@@ -1,0 +1,40 @@
+body{
+    margin: 0px;
+}
+
+
+.headerBox{
+    background-color: rgb(34, 34, 34);   
+}
+
+.headerBox-menu{
+    display: flex;
+    justify-content: space-evenly;  
+}
+
+.headerBox-menu-list{
+    display: flex;
+    gap: 20px;
+    list-style: none; 
+}
+
+
+.headerBox-menu-list__enlace{
+   text-decoration: none;
+    color: white;
+}
+
+.formContainer{
+    padding-left: 1em;
+    padding-right: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    
+}
+.formContainer_element{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 15em;
+}
