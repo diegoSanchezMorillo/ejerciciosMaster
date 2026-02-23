@@ -1,20 +1,36 @@
-.headerBox{
-    background-color: rgb(34, 34, 34);   
+body{
+    background-color:papayawhip;
 }
 
-.headerBox-menu{
+.container{
     display: flex;
-    justify-content: space-evenly;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
 }
-
-.headerBox-menu-list{
+.container-buttons{
     display: flex;
-    gap: 20px;
-    list-style: none; 
+    gap: 1rem;
 }
-
-
-.headerBox-menu-list__enlace{
-   text-decoration: none;
+.container-buttons__button{
+    background-color: chocolate;
+    padding:1em;
+    border-radius: 5px;
     color: white;
 }
+
+.container-left{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    align-items: flex-start;
+}
+
+.container-left__separator{
+    width: 90%;
+    height: 1px;
+    background-color: chocolate;
+}
+

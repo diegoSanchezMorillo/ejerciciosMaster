@@ -8,32 +8,27 @@
 </head>
 <body>
 
-        <!-- Creamos la cabecera-->
-    <header class="headerBox">
-        <!-- Creamos el menú-->
-        <nav class="headerBox-menu">
-            <ul class="headerBox-menu-list">
-                <li><a href="#ingredientes" class="headerBox-menu-list__enlace">Ingredientes</a></li>
-                <li ><a href="#proceso" class="headerBox-menu-list__enlace">Proceso</a></li>
-	        </ul>
-        </nav>
-        <!-- Cerramos el menú-->
-    </header>
-    <!-- Cerramos la cabecera-->
+
     
 
     <main>
 
-        <section>
+        <section class="container">
             <h1>Carrilleras de cerdo al vino tinto</h1>
-            <img src="https://i.blogs.es/20529a/carrilleras/450_1000.jpg" alt="carrileras" aria-label="Imagen de carrillera">
+            <img src="https://i.blogs.es/20529a/carrilleras/450_1000.jpg" alt="carrileras" aria-label="Imagen de carrillera" class="container__img">
             <p>
                 La carrillera o carrillada es un corte de carne muy popular que se extrae de la cara del animal, ya sea vaca o cerdo, y es su músculo masticador, es decir, moflete. Esta pieza de casquería, de poco valor hace algunos años, se ha convertido en una delicatessen y es que si la cocinamos a fuego lento y sin prisas, como hemos hecho con estas carrilleras de cerdo al vino tinto, se convierte en un bocado meloso, jugoso y sabroso.
             </p>
+            <div class="container-buttons">
+                <a href="#ingredientes"><button class="container-buttons__button">Ingredientes</button></a>
+                <a href="#proceso"><button class="container-buttons__button">Proceso</button></a>
+            </div>
+            
         </section>
 
-        <section id="ingredientes">
+        <section id="ingredientes" class="container-left" >
             <h2>Ingredientes</h2>
+            <hr class="container-left__separator">
             <h3>Para 3 personas</h3>
             <dl>
                 <dt>Carrilleras de cerdo</d>
@@ -70,8 +65,9 @@
             </dl>
         </section>
 
-        <section id="proceso">
+        <section id="proceso" class="container-left">
             <h2>Cómo hacer Carrilleras de cerdo al vino tinto</h2>
+            <hr class="container-left__separator">
             <h3>Dificultad: Media</h3>
 
             <dl>
