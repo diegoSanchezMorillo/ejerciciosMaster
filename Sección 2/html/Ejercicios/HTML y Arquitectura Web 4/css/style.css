@@ -1,0 +1,74 @@
+body{
+    margin: 0px;
+    background-color: rgb(46, 46, 58);
+}
+
+
+
+.headerBox{
+     box-shadow: 5px 5px 10px rgba(253, 251, 251, 0.5);
+     background-color: rgb(46, 46, 58);
+}
+
+.headerBox-menu{
+    display: flex;
+    margin: 0 auto;
+    align-items: end; 
+    flex-wrap: wrap;
+    gap: 1em;
+    max-width: 1200px;
+    min-width: 300px;
+}
+
+.headerBox-menu-list{
+    display: flex;
+    gap: 20px;
+    list-style: none; 
+    padding-inline-start: inherit;
+     
+}
+
+
+.headerBox-menu-list__enlace{
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+}
+
+
+.headerBox-menu-logo__img{
+    max-width: 250px;
+}
+
+.container{
+    max-width: 1200px;
+    min-width: 300px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    background-color: rgba(0, 0, 0, 0.301);
+    color: white;
+    padding: 1rem;
+    border-radius: 1em;
+}
+
+.container-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.container-form__button{
+    align-self: flex-end;
+    padding: 1em;
+    background-color: aquamarine;
+    border-radius: 5px;
+    width: 100px;
+    
+}
+
+.container-game{
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
