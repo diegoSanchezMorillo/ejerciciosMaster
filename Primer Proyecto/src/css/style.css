@@ -1,7 +1,17 @@
+
+/*Principales*/
+
+.titleOrange{
+    color: goldenrod;
+}
+
+
+
 /*Menú*/
 /*Barra de navegación*/
 .navbar{
-    background-image: radial-gradient(circle at top left, #2aa863, #0ce466);
+    background-color: #0C1B33;
+    border-bottom: 1px solid white;
 }
 
 /*Elementos del menú*/
@@ -19,6 +29,43 @@
 }
 
 .nav-link:hover{
-    color: salmon;
+    color: goldenrod;
 }
 
+/*Main*/
+
+.principalHead{
+    background-color: #0C1B33;
+}
+
+.containerHead{
+    display: flex;
+}
+
+.headLeft{
+    width: 50%;
+    padding: 4rem;
+    color: white;
+}
+
+.boxForm{
+    background-color: white;
+    border-radius: 1em;
+    color: black;
+    padding: 1rem;
+}
+
+.headRight{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.boxNumber{
+    border: 1px solid goldenrod;
+    border-radius: 1em;
+    padding: 5em;
+    color: white;
+}
