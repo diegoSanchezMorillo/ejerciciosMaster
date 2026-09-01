@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    let numero = Number(window.prompt("Ingrese el número"));
+
+    let centenas = Math.floor(numero / 100);
+    let decenas = Math.floor((numero % 100) / 10);
+    let unidades = numero % 10;
+
+    let digitos = [centenas, decenas, unidades];
+
+    let tienePar = digitos.some(d => d % 2 === 0);
+    let tieneImpar = digitos.some(d => d % 2 !== 0);
+
+    if (tienePar && tieneImpar) {
+        window.prompt("Tiene números pares e impares");
+    } else if (tienePar) {
+        window.prompt("Todos son pares");
+    } else {
+        window.prompt("Todos son impares");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <style>
+        select {
+            padding: 8px;
+            font-size: 16px;
+            width: 300px;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap:16px;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Personajes de Rick y Morty por planeta</h2>
+    
+    <label for="select-planetas">Elige un planeta: </label>
+    <select id="select-planetas">
+        <option value="">Cargando planetas...</option>
+    </select>
+    <div class="container" id="contenedor">
+
+    </div>
+
+    <script>
+        const selectPlanetas = document.getElementById("select-planetas");
+        const contenedor = document.getElementById("contenedor");
+
+        let planetaSeleccionado = "";
+        let idSeleccionado = null;
+
+        // Evento 'change': se ejecuta automáticamente cuando el usuario selecciona una opción
+        selectPlanetas.addEventListener("change", function() {
+            // Obtenemos el texto visible de la opción elegida
+            planetaSeleccionado = selectPlanetas.options[selectPlanetas.selectedIndex].text;
+            idSeleccionado = selectPlanetas.value;
+
+            // Validamos que no sea la opción por defecto ("-- Selecciona un planeta --")
+            if (idSeleccionado !== "") {
+                //Aparrtado 2 del ejercicio
+                //alert(`Has seleccionado el planeta: ${planetaSeleccionado}`);
+                obtenerPersonajes(idSeleccionado);
+            }
+        });
+
+        obtenerPlanetas();
+
+        // Función para obtener la lista de planetas/ubicaciones
+        function obtenerPlanetas() {
+            fetch("https://rickandmortyapi.com/api/location")
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error("Error al conectar con la API");
+                }
+                return res.json();
+            })
+            .then(datos => {
+                selectPlanetas.innerHTML = '<option value="">-- Selecciona un planeta --</option>';
+
+                datos.results.forEach(planeta => {
+                    let opcion = document.createElement("option");
+                    opcion.value = planeta.id; 
+                    opcion.textContent = planeta.name; 
+                    selectPlanetas.appendChild(opcion);
+                });
+            })
+            .catch(error => {
+                console.error(error);
+                alert("Hubo un problema al cargar los planetas.");
+                selectPlanetas.innerHTML = '<option value="">Error al cargar</option>';
+            });
+        }
+
+        //Función para obtener los personajes
+function obtenerPersonajes(idUbicacion) {
+
+    let salida = "";
+    contenedor.innerHTML = "<p>Cargando personajes...</p>";
+
+    fetch(`https://rickandmortyapi.com/api/location/${idUbicacion}`)
+    .then(res => {
+        if (!res.ok) throw new Error("Error al obtener la ubicación");
+        return res.json();
+    })
+    .then(ubicacion => {
+        let residentUrls = ubicacion.residents;
+
+        // Limpiamos el contenedor
+        contenedor.innerHTML = "";
+
+        if (residentUrls.length === 0) {
+            contenedor.innerHTML = "<p>No hay personajes registrados en este planeta.</p>";
+            return;
+        }
+
+        // Recorremos las URLs una a una con forEach
+        residentUrls.forEach(url => {
+            fetch(url)
+            .then(res => {
+                if (!res.ok) throw new Error("Error al obtener el personaje");
+                return res.json();
+            })
+            .then(personaje => {
+                // Rellenamos salida 
+                salida += `
+                    <div class="card">
+                        <img src="${personaje.image}" alt="${personaje.name}">
+                        <h4>${personaje.name}</h4>
+                        <p>${personaje.species}</p>
+                    </div>
+                `;
+                contenedor.innerHTML = salida;
+            })
+            .catch(error => console.error("Error cargando un personaje:", error));
+        });
+    })
+    .catch(error => {
+        console.error(error);
+        contenedor.innerHTML = "<p>Error al cargar la ubicación.</p>";
+    });
+}
+
+        
+    </script>
+</body>
+</html>

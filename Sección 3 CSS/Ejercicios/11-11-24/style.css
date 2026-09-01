@@ -1,0 +1,88 @@
+
+
+.ejercises{
+    background-color:#222229;
+    padding: 3.125rem;
+}
+
+.ejercises__buttonSubscribe{
+
+    padding: 10px 1.5625rem;
+    border: 2px solid burlywood;
+    border-radius: 1.25rem;
+    color: burlywood;
+    font-size: medium;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+.ejercises__buttonHappy{
+    padding: .9375rem 1.875rem .625rem;
+    border: 5px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    font-size: medium;
+    font-weight: bold;
+    background-color: transparent;
+
+}
+
+.ejercises__buttonAnatomy{
+    display: flex;
+    align-items: center;
+    padding: 1.25rem;
+    border: .0625rem solid blue;
+    border-radius: .3125rem;
+    background-image: linear-gradient(#3470fa, #313ed7); 
+    color: #fff;
+    cursor: pointer;
+}
+
+.chat-container{
+    margin-top: 1.25rem;
+    max-width: 21.875rem;
+    margin: .0625rem;
+    box-shadow: .3125rem .3125rem .1563rem 0px rgba(0,0,0,0.3);
+    border-radius: .9375rem .9375rem .9375rem .9375rem;
+    
+}
+
+.chat-title{
+    background-color: #222229;
+    color: white;
+    padding: .9375rem;
+    border-radius: .9375rem .9375rem 0px 0px;
+}
+
+.chat-box{
+    height: 25rem;
+    border-bottom: .0625rem solid grey;
+}
+
+.chat-dialog{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding: .625rem 0rem .625rem .625rem;
+    border-radius: 0rem 0rem .9375rem .9375rem;
+    
+    
+}
+
+.chat-dialog__input{
+    border: none;
+    padding-left: .3125rem;
+    width: 18.75rem;
+    
+}
+
+.chat-dialog__button{
+    background-color: #222229;
+    color: white;
+    padding: .625rem;
+    margin-right: 10px;
+    cursor: pointer;
+    width: 1200px;
+}

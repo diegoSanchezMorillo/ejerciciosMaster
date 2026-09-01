@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    let temperatura = Number(window.prompt("Ingresa la temperatura"));
+    let tipo = window.prompt("Si quieres convertirlo a grados centígrados pulsa C y si quieres convertirlo a grados farenheit pulsa F")
+
+    let farenheit = 0;
+    let grados = 0;
+
+    switch (tipo){
+        case "C":
+            grados = ((temperatura*9)/5)+32;
+            window.prompt(grados);
+            break;
+        case "F":
+            farenheit = ((temperatura-32)*5)/9;
+            window.prompt(farenheit);
+            break;
+        default: 
+            window.prompt("No has seleccionado ninguna opción correcta");
+    }
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    let array = [];
+
+// Llenar el array con 10 unos
+for (let i = 0; i < 10; i++) {
+    array.push(1);
+}
+
+let posicion;
+
+while (true) {
+    posicion = Number(prompt("Introduce un número entre 0 y 9 (-1 para salir):"));
+
+    if (posicion === -1) {
+        break;
+    }
+
+    if (posicion >= 0 && posicion <= 9) {
+        console.log("Valor actual:", array[posicion]);
+        array[posicion] = array[posicion] * 2;
+        console.log("Nuevo valor:", array[posicion]);
+    } else {
+        console.log("Número no válido.");
+    }
+}
+
+console.log(array);
+</script>
+</html>

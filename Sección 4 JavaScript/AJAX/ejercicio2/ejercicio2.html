@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        .imagen{
+            max-width: 20rem;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container" id="contenedor">
+
+    </div>
+
+    <script>
+
+        const contenedor = document.getElementById("contenedor");
+        //Creamos el número aleatorio y le damos formatos de 3 cifras
+        let aleatorio = Math.floor(Math.random()*500) + 1;
+        let numFormat = aleatorio.toString().padStart(3,"0");
+        pedir(numFormat);
+        //Pedimos la información pasando el número aleatorio en la URL
+        function pedir(num){
+            fetch(`https://api.disneyapi.dev/characters/${num}`)
+                .then((res) => (res.json()))
+                .then(datos =>{
+                    imprimirDatos(datos)
+                } )
+                .catch(error =>{
+                    console.log(error)
+                })
+        }
+
+        //Imprimimos los datos recibidos
+        function imprimirDatos(datos){
+
+            let salida = "";
+            let personaje = datos.data;
+
+            if (personaje.length === 0){
+                contenedor.innerHTML = "<p>Este ID está vacío</p>";
+            //Si el personaje no tiene peliculas lo imprimimos sin pelicula
+            }if(personaje.films.length === 0){
+            salida += `<div class="w3-card">
+                    <img src='${personaje.imageUrl}' class="imagen" alt="Alps">
+                <div class="w3-container w3-center">
+                    <p>${personaje.name}</p>
+                    <p>${personaje._id}</p>
+                </div>
+                </div>`;
+            //Si el personaje tiene peliculas, las imprimimos también   
+            }else{
+                salida += `<div class="w3-card">
+                    <img src='${personaje.imageUrl}' class="imagen" alt="Alps">
+                <div class="w3-container w3-center">
+                    <p>${personaje.name}</p>
+                    <p>${personaje._id}</p>
+                    <p>${personaje.films}</p>
+                </div>
+                </div>`;
+                
+            }
+
+            
+           contenedor.innerHTML = salida;
+        }
+    </script>
+</body>
+</html>

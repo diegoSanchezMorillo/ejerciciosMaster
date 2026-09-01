@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="product">
+            <h1 class="brocha">Brocha</h1>
+            <p id="precio">1 €</p>
+            <button onclick="sumar(`Brocha`, 'brocha')">Añadir</button>
+            <button onclick="restar('Brocha','brocha')">Restar</button>
+        </div>
+        <div class="product">
+            <h1 class="llave">Llave</h1>
+            <p id="precio">1,5 €</p>
+            <button onclick="sumar(`Llave`,'llave')">Añadir</button>
+            <button onclick="restar('Llave','llave')">Restar</button>
+        </div>
+        <div class="product">
+            <h1 class="martillo">Martillo</h1>
+            <p id="precio">1,5 €</p>
+            <button onclick="sumar(`Martillo`,'martillo')">Añadir</button>
+            <button onclick="restar('Martillo','martillo')">Restar</button>
+        </div>
+        <div class="product">
+            <h1 class="tronco">Tronco</h1>
+            <p id="precio">1,5 €</p>
+            <button onclick="sumar(`Tronco`,'tronco')">Añadir</button>
+            <button onclick="restar('Tronco','tronco')">Restar</button>
+        </div>
+    </div>
+
+    <div class="cestaCompra" id="cesta">
+
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

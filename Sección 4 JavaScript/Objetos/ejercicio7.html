@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="container"></div>
+
+    <script src="sistemaSolar.js"></script>
+    <script>
+        let planetas = [];
+
+        while (planetas.length<3){
+            let planeta = prompt("Introduce el nombre del planeta")
+
+            if(!sistemaSolar[planeta]){
+                alert("Ese planeta no existe");
+            }else if(planetas.includes(planeta)){
+                alert("Ese planeta ya los has elegido");
+            } else {
+                planetas.push(planeta);
+            }
+        }
+
+        let container = document.getElementById("container");
+
+        for (let i = 0;i<planetas.length;i++){
+            let p = sistemaSolar[planetas[i]];
+
+            container.innerHTML += `
+                <div class="card">
+                    <h2>${p.nombre}</h2>
+                    <img src="${p.imagen}">
+                    <p><strong>Color:</strong> ${p.color}</p>
+                    <p><strong>Temperatura:</strong> ${p.temperatura} ºC</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

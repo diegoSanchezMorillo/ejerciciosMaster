@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let puesto= Number(window.prompt("ingrese el puesto en el que acabó"));
+
+
+    //Ejercicio 1
+    /*
+    if(puesto==1){
+        window.prompt("Ganaste");
+    }else{
+        window.prompt("Lo importante es participar");
+    }
+    */
+
+    //Ejercicio 2
+    /*
+    if(puesto==1){
+        window.prompt("Medalla de Oro");
+    }
+    else if(puesto==2){
+        window.prompt("Medalla de plata");
+    }
+    else if(puesto==3){
+        window.prompt("Medalla de bronce");
+    }
+    else{
+        window.prompt("Lo importante es participar");
+    }
+    */
+    //Ejercicio 3
+    /*
+    switch (puesto){
+        case 1:
+            window.prompt("Medalla de oro");
+            break;
+        case 2:
+            window.prompt("Medalla de plata");
+            break;
+        case 3: 
+            window.prompt("Medalla de bronce");
+            break;
+        default:
+            window.prompt("Lo importante es participar");
+    }
+    */
+        
+    if(puesto >= 1 && puesto <= 3){
+        window.prompt("Sube al podium");
+    }else{
+
+        window.prompt("Se acabo la carrera");
+    }
+</script>
+</html>

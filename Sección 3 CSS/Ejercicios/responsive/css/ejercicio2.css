@@ -1,0 +1,24 @@
+.container-headings{
+    text-align: center;
+    padding: 5rem 0rem 1.25rem;
+}
+
+.container-newsletter{
+    display: flex;
+    gap: .625rem;
+    justify-content: center;
+}
+
+.newsletter__input{
+    padding: .625rem;
+    border: solid .0625rem white;
+    border-radius: .3125rem;
+}
+
+.newsletter__button{
+    padding: .625rem .625rem;
+    border: none;
+    border-radius: .3125rem;
+    cursor: pointer;
+    
+}

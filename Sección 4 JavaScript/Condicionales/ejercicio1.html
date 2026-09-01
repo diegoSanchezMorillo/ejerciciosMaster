@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    let num1= Number(window.prompt("ingrese el primer número"));
+    let num2= Number(window.prompt("ingrese el segundo número"));
+
+    let suma = num1+num2;
+    let resta = num1-num2;
+    let multiplicar = num1*num2;
+    let media = suma/2;
+    let grande;
+    let pequeño;
+
+    if(num1>num2){
+        grande = num1;
+        pequeño = num2;
+    }else{
+        grande = num2;
+        pequeño = num1;
+    }
+
+    console.log(
+        `La suma de los números es: ${suma}
+        La resta de los número es: ${resta}
+        La multiplicacion de los número es: ${multiplicar}
+        La media de los número es: ${media}
+        El número más grande es: ${grande}
+        El número más pequeño es: ${pequeño}`
+
+    )
+
+   
+</script>
+</html>

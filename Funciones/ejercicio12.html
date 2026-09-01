@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+    let año = 1;
+    let bisiesto = false;
+
+    function añosBisiestos (fecha){
+        return (fecha % 4 === 0 && fecha % 100 !== 0) || (fecha % 400 === 0);
+    }
+
+    while (año != 0){
+        año = Number(prompt("Introduce el año para ver si es bisiesto o no"));
+        bisiesto = añosBisiestos(año);
+        if (bisiesto == true && año == 0){
+            
+        }else if (bisiesto == true ){
+            alert(`El año ${año} es bisiesto`);
+        }else{
+            alert(`El año ${año} no es bisiesto`);
+        }
+    }
+</script>
+    
+</body>
+</html>

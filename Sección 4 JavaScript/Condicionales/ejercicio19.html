@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+     let nota1 = Number(window.prompt("ingrese la primera nota"));
+    let nota2 = Number(window.prompt("ingrese la segunda nota"));
+    let nota3 = Number(window.prompt("ingrese la tercera nota"));
+    let notaFinal = 0;
+
+    if(nota1>nota2){
+        notaFinal = nota1+nota3;
+        
+
+    }else if(nota2>nota1){
+        notaFinal = nota2+nota3;
+        
+    }
+
+    if (notaFinal >= 10){
+        window.prompt("Es matrícula");
+    }else if (notaFinal >=9 && notaFinal < 10 ){
+        window.prompt("Es sobresaliente");
+    }else if (notaFinal >=7 && notaFinal < 9 ){
+        window.prompt("Es notable");
+    }else if (notaFinal >=6 && notaFinal < 7 ){
+        window.prompt("Es bien");
+    }else if (notaFinal >=5 && notaFinal < 6 ){
+        window.prompt("Es suficiente");
+    }else if (notaFinal >= 0 && notaFinal < 5){
+        window.prompt("Es suspenso");
+    }
+
+</script>
+</html>

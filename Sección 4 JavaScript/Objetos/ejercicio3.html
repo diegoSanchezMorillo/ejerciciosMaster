@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="espacio"></div>
+    
+</body>
+
+<script>
+     let num = Number(prompt("Introduce un número:"));
+
+    let div = document.getElementById("espacio");
+
+    div.innerHTML = num;
+
+    if (num < 100) {
+        div.style.color = "green";
+    } else if (num >= 100 && num <= 200) {
+        div.style.color = "yellow";
+    } else {
+        div.style.color = "red";
+    }
+</script>
+</html>

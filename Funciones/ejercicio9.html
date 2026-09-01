@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    let num = prompt("introduce el número");
+
+    function contador (valor){
+
+        if(valor < 0){
+            alert("Debes de introducir un número positivo")
+        }else{
+           
+            let sinDecimales = parseInt(valor);
+            alert(`El número de cifras es: ${sinDecimales.toString().length}`);
+        }
+    }
+
+    contador(num);
+</script>
+</body>
+</html>

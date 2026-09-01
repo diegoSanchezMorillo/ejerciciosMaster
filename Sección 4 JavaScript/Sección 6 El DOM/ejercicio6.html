@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        html, body{
+            margin: 0;
+            min-height: 100%;
+        }
+
+        body{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        #cabecera{
+            display: flex;
+            margin: 2rem;
+            justify-content: space-evenly;
+
+        }
+        #contenido{
+            margin: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            flex: 1;
+        }
+
+        #pie{
+            width: 100%;
+            height: 7rem;
+            background-color: blueviolet;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .enlace{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="cabecera"></header>
+
+    <main id="contenido"></main>
+
+    <footer id="pie"></footer>
+
+    
+    <script>
+
+        const mostrarCabecera = document.getElementById("cabecera");
+        const mostrarContenido = document.getElementById("contenido");
+        const mostrarPie = document.getElementById("pie");
+
+        mostrarCabecera.innerHTML = `
+            <a href="#noticia1">Noticia 1</a>
+            <a href="#noticia2">Noticia 2</a>
+            <a href="#noticia3">Noticia 3</a>
+        `
+        mostrarContenido.innerHTML = `
+            <div id="noticia1">Eclipse solar total en España — Hoy se podrá observar un eclipse solar total en buena parte de España. La fase parcial comienza alrededor de las 19:30, y la totalidad se producirá aproximadamente desde las 20:26, desplazándose de oeste a este.</div>
+
+            <div id="noticia2">Continúan las labores de rescate tras el terremoto de Colombia — Los equipos de emergencia siguen buscando supervivientes entre los edificios derrumbados. La tragedia ha dejado cientos de víctimas y numerosos heridos, mientras continúan las operaciones de rescate.</div>
+
+            <div id="noticia3">El Euríbor vuelve a subir — El Euríbor a 12 meses se sitúa hoy en torno al 2,957%, encadenando cuatro jornadas consecutivas de subida. Es especialmente relevante para quienes tienen hipotecas variables o están pensando en contratar una.</div>
+        `
+
+
+        mostrarPie.innerHTML = `
+            <a href="#cabecera" class="enlace">Inicio 1</a>
+        `
+
+
+    </script>
+    
+</body>
+</html>

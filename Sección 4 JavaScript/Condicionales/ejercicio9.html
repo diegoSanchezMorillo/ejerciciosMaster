@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let temperatura = Number(window.prompt("Ingrese su temperatura"));
+
+    if(temperatura>40){
+        window.prompt("Vete a otro sitio");
+    }if(temperatura<=40 && temperatura>=30){
+        window.prompt("Enciende el aire acondicionado");
+    }if(temperatura<=30 && temperatura>=20){
+        window.prompt("No hagas nada");
+    }if(temperatura<=20 && temperatura>=10){
+        window.prompt("Encendiende la calefacción");
+    }if(temperatura<10){
+        window.prompt("vete a otro sitio");
+    }
+</script>
+</html>

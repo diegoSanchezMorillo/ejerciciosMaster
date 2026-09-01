@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    let edad = Number(window.prompt("Ingrese su edad"));
+    let licencia = "";
+    let nombre = "";
+    let apellidos = "";
+    let precio = 0;
+    let ciudad ="";
+    let dias = 0;
+
+    if (edad < 18){
+        window.prompt("No puedes alquilar por ser menor de edad");
+    }else{
+        licencia = window.prompt("¿Tiene licencia de conducir?");
+
+        if (licencia == "Si" || licencia == "si"){
+            nombre = window.prompt("Introduce tu nombre");
+            apellidos = window.prompt("Introduce tus apellidos");
+            cuidad = window.prompt("¿En que ciudad quieres alquilar el coche?");
+            dias = Number(window.prompt("Introduce los días que quieres alquilar"));
+
+            if(dias == 7){
+                precio == 150;
+            }else{
+                precio = dias * 25;
+            }
+        }
+        else if (licencia == "No" || licencia == "no"){
+            window.prompt("No puedes alquilar sin licencia de conducir");
+        }
+    }
+</script>
+</html>

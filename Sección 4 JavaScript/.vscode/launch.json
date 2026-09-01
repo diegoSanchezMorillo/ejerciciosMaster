@@ -1,0 +1,15 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open ejercicio5.html",
+            "file": "c:\\Users\\DieGod\\Desktop\\curso\\Ejercicios\\Sección 4 JavaScript\\Objetos\\ejercicio5.html"
+        }
+    ]
+}

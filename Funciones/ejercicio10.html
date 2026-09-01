@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+    let figura = prompt("Introduce la figura que quieres calcular su área");
+
+    function circulo(){
+        let radio = Number(prompt("Introduce el radio del círculo"));
+        alert(Math.trunc(Math.PI * (radio * 2))) ;
+    }
+
+    function triangulo (){
+        let base = Number(prompt("Introduce la base del triángulo"));
+        let altura = Number(prompt("Introduce la altura del triángulo"));
+
+        alert(Math.trunc((base*altura)/2));
+
+    }
+
+    function cuadrado (){
+        let lado = Number(prompt("Introduce el lado del cuadrado"));
+
+        alert(Math.trunc(lado*lado));
+    }
+
+    if (figura == "Circulo"|| figura == "Círculo" ){
+        circulo();
+    }
+    else if  (figura == "Triangulo" || figura == "Triángulo"){
+        triangulo();
+    }
+    else if (figura == "Cuadrado"){
+        cuadrado();
+    }
+    else{
+        alert("la figura no es correcta");
+    }
+
+</script>
+</body>
+</html>

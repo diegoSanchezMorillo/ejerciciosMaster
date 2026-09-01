@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let frase = window.prompt("Habla con Bob");
+    
+    
+    if(frase.includes("?") && frase === frase.toUpperCase()) {
+        window.prompt("¡Eh!, tranquilizate! Yo sé lo que hago");
+    }else if (frase === frase.toUpperCase()) {
+        window.prompt("¡Eh!, tranquilizate");
+    }else if (frase.includes("?")) {
+        window.prompt("¡Claro!");
+    }else if(frase.includes("?") && frase === frase.toUpperCase()) {
+        window.prompt("¡Eh!, tranquilizate! Yo sé lo que hago");
+    }else if(frase == ""){
+        window.prompt("Vale con que esa tenemos");
+    }
+    else {
+        window.prompt("Sin más");
+    }
+</script>
+</html>

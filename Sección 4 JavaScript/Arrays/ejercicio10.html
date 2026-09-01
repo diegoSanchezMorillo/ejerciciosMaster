@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let array = [];
+
+    // Llenar el array con 11 ceros
+    for (let i = 0; i < 11; i++) {
+        array.push(0);
+    }
+
+    let numero;
+
+    do {
+        numero = Number(prompt("Introduce un número entre 0 y 10:"));
+
+        if (numero >= 0 && numero <= 10) {
+            array[numero]++;
+        } else if (numero > 10) {
+            console.log("Número incorrecto.");
+        }
+
+    } while (numero >= 0);
+
+    // Mostrar el contenido del array
+    for (let i = 0; i < array.length; i++) {
+        console.log("Posición " + i + ": " + array[i]);
+    }
+</script>
+</html>

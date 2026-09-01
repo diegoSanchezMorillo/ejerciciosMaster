@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
+*{
+   margin: 0;
+   padding: 0; 
+}
+
+body{
+    font-family: 'Kantumruy Pro';
+}
+
+/* CONTENIDOS MAXIMOS*/
+
+.content-max{
+    max-width: 75rem;
+    margin:0 auto ;
+}
+
+/* COLORES FONDOS*/
+
+.color-primary{
+    background-color: #0B0514;
+}
+
+.color-secundary{
+    background-color: #D9D9D9;
+}
+
+/* FUENTES */
+
+.font-white{
+    color: #D9D9D9;
+}
+
+.font-black{
+    color: #0B0514;
+}
+
+.fs-title{
+    font-size: 8rem;
+    @media screen and (max-width: 768px) {
+    font-size: 3rem;
+    }
+}
+
+.fs-info{
+    font-size: 1.5rem;
+}
+
+.fs-default{
+    font-size: 2.25rem;
+    font-weight: bold;
+    @media screen and (max-width: 768px) {
+    font-size: 1.15rem;
+    }
+}
+
+
+
+/*BUTTONS*/
+
+.bt-transparent{
+    padding: .3125rem 1.5625rem;
+    border: solid .0625rem black;
+    border-radius: .9375rem;
+    background-color: transparent;
+    margin-bottom: 1.25rem;
+    cursor: pointer;
+}
+
+.bt-black{
+    background-color: #0B0514;
+    padding: .625rem 4.375rem .625rem .625rem;
+    color: #D9D9D9;
+    cursor: pointer;
+}
+
+.bt-transparent-white{
+    padding: .3125rem 1.5625rem;
+    border: solid .0625rem #D9D9D9;
+    border-radius: .9375rem;
+    background-color: transparent;
+    margin-bottom: 1.25rem;
+    color: #D9D9D9;
+    max-width: 9.375rem;
+    cursor: pointer;
+}
+
+/*ARREGLOS*/
+
+.brd-white{
+    display:flex;
+    flex-direction: column;
+    gap: 5rem;
+    border-left: solid 1px #D9D9D9;
+}
+

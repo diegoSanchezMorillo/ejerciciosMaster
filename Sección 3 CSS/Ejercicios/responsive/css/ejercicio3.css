@@ -1,0 +1,33 @@
+.container-headings{
+    padding: 3.125rem;
+}
+
+.card{
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+    border: solid .0625rem white;
+    border-radius: 5px;
+    padding: .9375rem;
+    @media screen and (max-width: 768px) {
+    display: block;
+    border: none;
+    
+    }
+}
+
+.card__content{
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+    @media screen and (max-width: 768px) {
+    padding-top: .625rem; 
+    }
+}
+
+.card__content__btn{
+    max-width: 6.25rem;
+    border: solid .0625rem white;
+    border-radius: .3125rem;
+    padding: .3125rem;
+}

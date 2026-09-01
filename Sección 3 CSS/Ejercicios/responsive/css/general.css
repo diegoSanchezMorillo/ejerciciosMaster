@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.content-max{
+    max-width: 75rem;
+    margin:0 auto ;
+}
+/*TIPOS DE TEXTOS*/
+.heading{
+
+}
+
+.subheading{
+
+}
+
+.ft-default{
+
+}
+
+/*COLORES*/
+
+.color-primary{
+    background-color: #1c1c1f;
+}
+
+.color-secundary{
+    background-color: #303033;
+}
+
+.color-transparent{
+    background-color: transparent;
+}
+
+/*COLORES TEXTO*/
+
+.textColor-primary{
+    color: white;
+}
+
+.textColor-secundary{
+    color: #5b5b5e;
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="formulario">
+      <input
+        type="text"
+        name=""
+        id="cajaNombre"
+        placeholder="Ingresa el nombre de la persona"
+      />
+      <button
+        onclick="busquedaNombre(document.getElementById('cajaNombre').value)"
+      >
+        Buscar
+      </button>
+    </div>
+    <div class="container" id="contenedor"></div>
+
+    <script src="personas.js"></script>
+
+    <script>
+      let nuevasPersonas = [];
+
+      const container = document.getElementById("contenedor");
+
+      let salida = "";
+
+      //Creamos el nuevo array con los atributos que queremos
+      personas.forEach((persona) => {
+        let nuevaPersona = {
+          nombre: persona.name,
+          imagen: persona.picture,
+          edad: persona.age,
+          email: persona.email,
+          direccion: persona.address,
+          ojos: persona.eyeColor,
+        };
+        nuevasPersonas.push(nuevaPersona);
+      });
+
+      function imprimirPersona(persona) {
+        return `
+                <div class="card">
+                    <h2>${persona.nombre}</h2>
+                    <img src="${persona.imagen}" class="imagen">
+                    <p><strong>Edad:</strong> ${persona.edad}</p>
+                    <p><strong>Email:</strong> ${persona.email}</p>
+                    <p><strong>Dirección:</strong> ${persona.direccion}</p>
+                    <p><strong>Color de ojos:</strong> ${persona.ojos}</p>
+                    
+                </div>
+            `;
+      }
+
+      //Funcion de busqueda por texto
+
+      function busquedaNombre(texto) {
+        let encontrado = false;
+        salida = "";
+        nuevasPersonas.forEach((persona) => {
+          if (persona.nombre.includes(texto)) {
+            encontrado = true;
+
+            salida += imprimirPersona(persona);
+            container.innerHTML = salida;
+          }
+        });
+        if (!encontrado) {
+          alert("no se ha encontrado a nadie");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .suma{
+            background-color: crimson;
+            color: blue;
+        }
+        .resta{
+            background-color: yellow;
+            color: black;
+        }
+        .multiplicacion{
+            background-color: seagreen;
+            color: white;
+        }
+        .division{
+            background-color: black;
+            color: red;
+        }
+        .resto{
+            background-color: tomato;
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="resultados"></div>
+    
+
+
+    <script>
+        //recogemos los números y los guardo en variables
+        let num1 = Number(prompt("Ingresa el primer numero"));
+        let num2 = Number(prompt("Ingresa el segundo número"));
+        //hacemos las operaciones y las guardo en variables
+        let suma = num1 + num2;
+        let resta = num1 - num2;
+        let multiplicacion = num1 * num2;
+        let division = num1 / num2;
+        let resto = num1%num2;
+
+        //saleccionamos dónde quiero mostrar el html que voy crear
+        const mostrar = document.getElementById("resultados");
+        //creamos el html
+        mostrar.innerHTML =`
+                <div class="suma">${suma}</div>
+                <div class="resta">${resta}</div>
+                <div class="multiplicacion">${multiplicacion}</div>
+                <div class="division">${division}</div>
+                <div class="resto">${resto}</div>
+                `
+
+    </script>
+    
+</body>
+</html>

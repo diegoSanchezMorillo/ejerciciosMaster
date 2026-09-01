@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .w3-card{
+            max-width: 15rem;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="contenedor"></div>
+
+    <script>
+      const contenedor = document.getElementById("contenedor");
+      pedirDatos();
+
+      //Función para pedir los datos
+      function pedirDatos(){
+        fetch("https://gutendex.com/books")
+            .then((res) => (res.json()))
+            .then((datos) => {imprimirLibros(datos)})
+            .catch(error =>{
+                console.log(error);
+            })
+      }
+
+    /*  fetch("https://gutendex.com/books")
+        .then(function recogerRespuesta(respuesta) {
+          return respuesta.json();
+        })
+        .then(function imprimirObjeto(datos) {
+          console.log(datos);
+        });*/
+
+      //Mostramos los libros 
+      function imprimirLibros(datos) {
+
+        let salida = ""
+
+        datos.results.forEach(libro => {
+            salida += `<div class="w3-card">
+                    <img src='${libro.formats["image/jpeg"]}' alt="Alps">
+                <div class="w3-container w3-center">
+                    <p>${libro.title}</p>
+                    <p>${libro.authors[0].name}</p>
+                </div>
+                </div>`;
+        });
+
+        contenedor.innerHTML = salida;
+
+      }
+    </script>
+  </body>
+</html>

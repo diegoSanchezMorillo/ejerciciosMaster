@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container" id="contenedor"></div>
+
+    <script src="personas.js"></script>
+
+    <script>
+      let nuevasPersonas = [];
+
+      const container = document.getElementById("contenedor");
+
+      let salida = "";
+
+      //Sección 10 Pedir el número para buscar ppor el índice
+      //let indice = Number(prompt("Ingresa el número del índice de la persona que quieres buscar"),);
+      let nombrePersona = prompt("Ingresa el nombre de la persona");
+
+      //Creamos el nuevo array con los atributos que queremos
+      personas.forEach((persona) => {
+        let nuevaPersona = {
+          nombre: persona.name,
+          imagen: persona.picture,
+          edad: persona.age,
+          email: persona.email,
+          direccion: persona.address,
+          ojos: persona.eyeColor,
+        };
+        nuevasPersonas.push(nuevaPersona);
+        //Sección 9 Imprimir todas las personas
+        //salida += imprimirPersona2(nuevaPersona);
+      });
+
+      //Sección 8: Mostrar la primera persona del array
+      //salida = imprimirPersona(nuevasPersonas[0]);
+
+      //Sección 10 Buscar por índice
+      /*if (indice <= nuevasPersonas.length) {
+        salida = imprimirPersona(nuevasPersonas[indice]);
+      } else {
+        alert("No se encontro ese índice");
+      }*/
+
+      //Apartado 11 Pasamos el texto y hacemos la busqueda
+      busquedaNombre(nombrePersona);
+
+      //container.innerHTML = salida;
+
+      function imprimirPersona(persona) {
+        return `
+                <div class="card">
+                    <h2>${persona.nombre}</h2>
+                    <img src="${persona.imagen}" class="imagen">
+                    <p><strong>Edad:</strong> ${persona.edad}</p>
+                    <p><strong>Email:</strong> ${persona.email}</p>
+                    <p><strong>Dirección:</strong> ${persona.direccion}</p>
+                    <p><strong>Color de ojos:</strong> ${persona.ojos}</p>
+                    
+                </div>
+            `;
+      }
+
+      function imprimirPersona2(persona) {
+        return `
+                <div class="cardCentrado" style="background-color:${persona.ojos}">
+                    <img src="${persona.imagen}" alt="">
+                    <h1>${persona.nombre}</h1>
+                    <p>${persona.edad}</p>
+                    <p>${persona.email}</p>
+                    <p>${persona.direccion}</p>
+                    <p>${persona.ojos}</p>
+                </div>
+            `;
+      }
+
+      //Funcion de busqueda por texto
+
+      function busquedaNombre(texto) {
+        let encontrado = false;
+        nuevasPersonas.forEach((persona) => {
+          if (persona.nombre.includes(texto)) {
+            encontrado = true;
+            salida += imprimirPersona(persona);
+            container.innerHTML = salida;
+          }
+        });
+        if (!encontrado) {
+          alert("no se ha encontrado a nadie");
+        }
+      }
+    </script>
+  </body>
+</html>

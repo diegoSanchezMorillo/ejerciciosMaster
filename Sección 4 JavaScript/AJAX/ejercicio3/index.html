@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="caja">
+      <input type="text" name="num" id="num" />
+      <button id="boton">Enviar</button>
+    </div>
+
+    <div class="container" id="contenedor"></div>
+
+    <script>
+      const contenedor = document.getElementById("contenedor");
+      const boton = document.getElementById("boton");
+    //Recogemos el valor del input
+      boton.addEventListener("click", function () {
+        let numero = num.value;
+        pedir(numero);
+      });
+      //Hacemos la petición pasando el número recogido
+      function pedir(num) {
+        fetch(`https://corsproxy.io/?https://xkcd.com/${num}/info.0.json`)
+          .then((res) => {
+            if (res.status === 404) {
+              throw new Error(`El cómic número ${num} no existe.`);
+            }
+            if (!res.ok) {
+              throw new Error("Error al comunicarse con el servidor.");
+            }
+            return res.json();
+          })
+          .then((datos) => {
+            imprimirDatos(datos);
+          })
+          .catch((error) => {
+            console.error(error);
+
+            // Muestra el mensaje de error en una ventana emergente
+            alert(error.message);
+
+            // Limpiamos el contenedor por si había algún mensaje previo (como "Cargando...")
+            contenedor.innerHTML = "";
+          });
+      }
+      //Imprimimos los datos
+      function imprimirDatos(datos) {
+
+            let salida = "";
+        //Imprimios el cómic
+        salida += `<div class="w3-card">
+                    <img src='${datos.img}' class="imagen" alt="Alps">
+                <div class="w3-container w3-center">
+                    <h1>${datos.title}</h1>
+                    <p>${datos.day}/${datos.month}/${datos.year}</p>
+                </div>
+                </div>`;
+        contenedor.innerHTML = salida;
+        
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="fichaPersona"></div>
+    
+    <script src="personas.js"></script>
+    <script>
+        let nombre = prompt("Introduce el nombre:");
+
+        let encontrada = false;
+        let div = document.getElementById("fichaPersona");
+
+        for (let clave in personas) {
+
+            if (personas[clave].name.toLowerCase() == nombre.toLowerCase()) {
+
+                div.style.textAlign = "center";
+                div.style.backgroundColor = personas[clave].eyeColor;
+
+                div.innerHTML = `
+                    <img src="${personas[clave].picture}">
+                    <h1>${personas[clave].name}</h1>
+                    <p>Edad: ${personas[clave].age}</p>
+                    <p>Email: ${personas[clave].email}</p>
+                    <p>Dirección: ${personas[clave].address}</p>
+                `;
+
+                encontrada = true;
+                break;
+            }
+        }
+
+        if (!encontrada) {
+            div.innerHTML = "<h2>La persona no existe.</h2>";
+        }
+    </script>
+</body>
+</html>

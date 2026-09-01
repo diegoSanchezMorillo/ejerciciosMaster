@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container" id="contenedor"></main>
+
+    <script src="sistemasolar.js"></script>
+    <script>
+      const container = document.getElementById("contenedor");
+
+      let planetasElegidos = [];
+
+      let salida = "";
+
+      while (planetasElegidos.length < 3) {
+        let nombrePlaneta = prompt(
+          "Ingresa el nombre del planeta",
+        ).toLowerCase();
+
+        let planetaEncontrado = null;
+
+        sistemaSolar.forEach((planeta) => {
+          if (planeta.nombre === nombrePlaneta) {
+            planetaEncontrado = planeta;
+          }
+        });
+
+        if (planetaEncontrado === null) {
+          alert("El planeta no existe");
+        } else {
+          let repetido = false;
+
+          planetasElegidos.forEach((planeta) => {
+            if (planeta.nombre === nombrePlaneta) {
+              repetido = true;
+            }
+          });
+
+          if (repetido) {
+            alert("No puedes poner el mismo planeta");
+          } else {
+            planetasElegidos.push(planetaEncontrado);
+            salida += printPlanetas(
+              planetaEncontrado.imagen,
+              planetaEncontrado.nombre,
+              planetaEncontrado.color,
+              planetaEncontrado.temperatura,
+              planetaEncontrado.fondo,
+            );
+          }
+        }
+      }
+
+      container.innerHTML = salida;
+
+      function printPlanetas(img, nombre, color, temperatura, fondo) {
+        return `
+                <div class="card" id="${nombre}">
+                    <h2>${nombre}</h2>
+                    <img src="${img}" class="imagen">
+                    <p><strong>Temperatura:</strong> ${color} ºC</p>
+                    <p><strong>Temperatura:</strong> ${temperatura} ºC</p>
+                    <button onClick="cambiarFondo('${nombre}', '${fondo}')">Cambiar fondo</button>
+                </div>
+            `;
+      }
+
+      function cambiarFondo(nombre, color) {
+        let card = document.getElementById(nombre);
+
+        card.style.backgroundColor = color;
+      }
+    </script>
+  </body>
+</html>

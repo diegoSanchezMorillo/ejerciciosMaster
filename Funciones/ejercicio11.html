@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+
+    let moneda = prompt("Introduce el tipo de moneda al que quieres convertir (dólares, yenes o libras)");
+    let cantidad = Number(prompt("Introduce la cantidad que desea transformar"));
+
+    function conversion (mnd, cant){
+        if (mnd == "dolares"){
+            alert(`En dólares :${cant * 0.86}`);
+        } else if (mnd == "yenes"){
+            alert(`En yenes: ${cant * 1.28611}`);
+        }else if (mnd == "libras"){
+            alert(`En libras: ${cant * 129.852}`);
+        }else{
+            alert("No has introducido ninguna moneda válida");
+        }
+    }
+
+    conversion(moneda,cantidad);
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mensaje"></div>
+
+    <script>
+
+        let nombre = prompt("Ingresa tu nombre");
+        let edad = Number(prompt("Ingresa tu edad"));
+
+        const mostrar = document.getElementById("mensaje");
+        /*
+        if (edad >= 18){
+            mostrar.innerHTML = `<p>Hola ${nombre}, eres mayor de edad`</p>;
+        }else{
+            mostrar.innerHTML = `<p>Hola ${nombre}, eres menor de edad</p>`;
+        }*/
+
+        let mensaje = edad >= 18 ? `<p>Hola ${nombre}, eres mayor de edad</p>` : `<p>Hola ${nombre}, eres menor de edad</p>`;
+        mostrar.innerHTML = mensaje;
+    </script>
+</body>
+</html>

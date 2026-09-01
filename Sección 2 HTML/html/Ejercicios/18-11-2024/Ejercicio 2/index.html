@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <main>
+        <!-- START FORM-->
+        <form action="" method="post" class="formPaises">
+
+            <div id="imageSelected"></div>
+                <select class="form-control input-lg" id="paises" onChange="imageChanged()">
+                    <option meta-img="https://cdn.countryflags.com/thumbs/portugal/flag-800.png" id="portugal">
+                        Portugal
+                    </option>
+                    <option  meta-img="https://cdn.countryflags.com/thumbs/spain/flag-800.png" id="españa">
+                        España
+                    </option>
+                    <option  meta-img="https://cdn.countryflags.com/thumbs/italy/flag-800.png" id="italia">
+                        Italia
+                    </option>
+                    <option  meta-img="https://cdn.countryflags.com/thumbs/germany/flag-800.png" id="alemania">
+                        Alemania
+                    </option>
+                </select>
+                <label for="observaciones">Observaciones:</label>
+                <textarea name="observaciones" id="observaciones" cols="30" rows="10" required></textarea>
+                <button type="submit">Enviar</button>
+
+        </form>
+        <!-- END FORM-->
+    </main>
+
+    <script>
+        //SCRIPT PARA CAMBIAR LA BANDERA SEGÚN LA OPCIÓN OBTENIDA EN EL SELECT
+        function imageChanged(){
+            let selector = document.querySelector("#paises");
+            let divImage =   document.querySelector("#imageSelected");
+            let selectedOption = selector.options[selector.selectedIndex];
+            let image = selectedOption.getAttribute("meta-img");
+
+            divImage.innerHTML = "<img src='"+image+"' style='width:100px;'>"
+            }
+            imageChanged()
+    </script>
+    
+</body>
+</html>

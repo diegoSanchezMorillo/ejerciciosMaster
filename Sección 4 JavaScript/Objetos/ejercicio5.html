@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script src="superheroes.js"></script>
+    <script>
+    let fecha = prompt("Ingrese su fecha de nacimiento en formado DD/MM/AAAA");
+    let nombre = prompt("Ingrese su nombre").toUpperCase();
+    let apellido = prompt("Ingrese el apellido").toUpperCase();
+
+
+    let superheroe = {
+        letraNombre : "",
+        letraApellido :"",
+        fechaNacimiento : ""
+    }
+
+    superheroe.letraNombre = nombre.charAt(0);
+    superheroe.letraApellido = apellido[apellido.length -1];
+    superheroe.fechaNacimiento = fecha[fecha.length -1];
+
+    let genero = prompt("¿Quiere el nombre en masculino o femenino. Introduce M o F.");
+
+    if (superheroe.letraNombre >= "A" && superheroe.letraNombre <= "I") {
+        superheroe.letraNombre = "Guardián";
+    } else if (superheroe.letraNombre >= "J" && superheroe.letraNombre <= "R") {
+        superheroe.letraNombre = "Sombra";
+    } else if (superheroe.letraNombre >= "S" && superheroe.letraNombre <= "Z") {
+        superheroe.letraNombre = "Vórtice"
+    }else{
+        console.log("Error en el nombre")
+    }
+
+    if ( superheroe.letraApellido >= "A" && superheroe.letraApellido <= "I" && genero == "M") {
+        superheroe.letraApellido = "Cósmico";
+    } else if (superheroe.letraApellido >= "A" && superheroe.letraApellido <= "I" && genero == "F") {
+        superheroe.letraApellido = "Centinela";
+    }else if (superheroe.letraApellido >= "J" && superheroe.letraApellido <= "R" && genero == "M") {
+        superheroe.letraApellido = "Etéreo";
+    } else if (superheroe.letraApellido >= "J" && superheroe.letraApellido <= "R" && genero == "F"){
+        superheroe.letraApellido = "Del Alba";
+    }else if (superheroe.letraApellido >= "S" && superheroe.letraApellido <= "Z" && genero == "M") {
+        superheroe.letraApellido = "Negro";
+    }else if (superheroe.letraApellido >= "S" && superheroe.letraApellido <= "Z" && genero == "F"){
+        superheroe.letraApellido = "Plateada"
+    }else {
+        console.log("No es una letra válida");
+    }
+
+    prompt(`${superheroe.letraNombre} ${superheroe.letraApellido}`);
+</script>
+</body>
+
+</html>
