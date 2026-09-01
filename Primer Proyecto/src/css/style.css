@@ -1,0 +1,24 @@
+/*Menú*/
+/*Barra de navegación*/
+.navbar{
+    background-image: radial-gradient(circle at top left, #2aa863, #0ce466);
+}
+
+/*Elementos del menú*/
+.logo{
+    height:3em;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+.nav-link{
+    color: white;
+    font-weight: 600;
+}
+
+.nav-link:hover{
+    color: salmon;
+}
+
