@@ -26,10 +26,14 @@
     text-align: center;
 }
 
-/*Tamaños titles*/
+/*Tamaños*/
 
 .subtitulo{
     font-size: clamp(1em, 1vw,1.5em);
+}
+
+.tamañoIconos{
+    font-size:3em ;
 }
 
 /*Menú*/
@@ -90,15 +94,29 @@
     border-radius: 1em;
     padding: 5em;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*Segunda sección*/
+
+.boxTargets{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.boxtarget{
+    padding: 3em;
+    border-radius: 2em;
+}
 
 @media (min-width: 992px) {
 
 .containerHead{
     flex-direction:row;
-    padding-top: 5em;
+    padding-top: 10em;
+    padding-bottom: 10em;
 }
 
 .headLeft{
@@ -107,6 +125,12 @@
 
 .headRight{
     flex: 50%;
+}
+
+.boxTargets{
+    
+    flex-wrap:nowrap;
+    
 }
 
 }
