@@ -111,6 +111,14 @@
     border-radius: 2em;
 }
 
+/*footer*/
+
+.pie{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (min-width: 992px) {
 
 .containerHead{
