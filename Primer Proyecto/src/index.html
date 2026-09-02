@@ -15,35 +15,45 @@
   <body>
     <!-- Comienza el menú-->
     <header>
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
           <a class="navbar-brand" href="#">
-            <img
-              src="./public/img/logo.svg"
-              alt="Tu Lotería Logo"
-              class="logo"
-            />
+            <img src="./public/img/logo.svg" alt="Logo" class="logo" />
           </a>
           <button
             class="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon "></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contacto</a>
-              </li>
-            </ul>
+          <div
+            class="offcanvas offcanvas-end fondoPrimario"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacto</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
@@ -51,22 +61,30 @@
     <!-- Fin del menú-->
 
     <main>
-      <section class="principalHead">
+      <section class="principalHead fondoPrimario">
         <div class="container containerHead">
           <div class="headLeft">
             <h1>Comprueba tus números de lotería al instante</h1>
             <p>La forma más segura de comprobar tus boletos desde casa</p>
             <div class="boxForm">
-                <h6>Introduce tu boleto para comprobar</h6>
+              <h6>Introduce tu boleto para comprobar</h6>
             </div>
           </div>
 
           <div class="headRight">
             <div class="boxNumber">
-              <h4 class="titleOrange">Bote destacado de la semana</h4>
-              <center><h2>124.000.000 €</h2></center>
+              <h4 class="colorPrimario">Bote destacado de la semana</h4>
+              <h2 class="textoCentrado">124.000.000 €</h2>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section class="container boxSecundary pt-5">
+        <div class="boxTitles">
+            <p class="colorPrimario textoCentrado">Tus sorteos favoritos</p>
+            <h2 class="colorSecundario textoCentrado">Soporte completo para los principales sorteos</h2>
+            <p class="subtitulo textoCentrado">Analizamos las bases de datos oficiales al instante para ofrecerte un veredicto fiable e inmediato.</p>
         </div>
       </section>
     </main>

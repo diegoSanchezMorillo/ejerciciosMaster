@@ -1,11 +1,36 @@
 
-/*Principales*/
+/*Colores*/
 
-.titleOrange{
+.fondoPrimario{
+    background-color: #0C1B33;
+}
+.fondoSecundario{
+    background-color: white;
+}
+
+.colorPrimario{
     color: goldenrod;
 }
 
+.colorSecundario{
+    color: #0C1B33;
+}
 
+.colorTerciario{
+    color: white;
+}
+
+/*Alineamientos letras*/
+
+.textoCentrado{
+    text-align: center;
+}
+
+/*Tamaños titles*/
+
+.subtitulo{
+    font-size: clamp(1em, 1vw,1.5em);
+}
 
 /*Menú*/
 /*Barra de navegación*/
@@ -14,13 +39,14 @@
     border-bottom: 1px solid white;
 }
 
+
 /*Elementos del menú*/
 .logo{
     height:3em;
 }
 
 .logo:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .nav-link{
@@ -34,16 +60,14 @@
 
 /*Main*/
 
-.principalHead{
-    background-color: #0C1B33;
-}
-
 .containerHead{
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    padding-top: 8em;
 }
 
 .headLeft{
-    width: 50%;
     padding: 4rem;
     color: white;
 }
@@ -56,11 +80,9 @@
 }
 
 .headRight{
-    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .boxNumber{
@@ -68,4 +90,23 @@
     border-radius: 1em;
     padding: 5em;
     color: white;
+}
+
+/*Segunda sección*/
+
+@media (min-width: 992px) {
+
+.containerHead{
+    flex-direction:row;
+    padding-top: 5em;
+}
+
+.headLeft{
+    flex: 50%;
+}
+
+.headRight{
+    flex: 50%;
+}
+
 }
