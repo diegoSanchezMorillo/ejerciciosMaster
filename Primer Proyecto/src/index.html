@@ -72,32 +72,40 @@
             <h1>Comprueba tus números de lotería al instante</h1>
             <p>La forma más segura de comprobar tus boletos desde casa</p>
             <div class="boxForm">
-              <div class="formLeft">
-                <h6>1. Introduce tu boleto para comprobar</h6>
-                <select name="tipoSorteo" id="tipoSorteo" class="selectSorteo">
-                <option value="euromillones">Euromillones</option>
-                <option value="loteria">Lotería Nacional</option>
-                <option value="primitiva">Primitiva</option>
-              </select>
-              </div>
-              <div class="formRight">
-                <h6>2. Escribe tus números</h6>
-                <input type="number" name="" id="" class="numberSorteo">
-                <input type="number" name="" id="" class="numberSorteo">
-                <input type="number" name="" id="" class="numberSorteo">
-                <input type="number" name="" id="" class="numberSorteo">
-                <input type="number" name="" id="" class="numberSorteo">
+              <form action="" id="formBoletos">
+                <div class="formLeft">
+                  <h6>1. Introduce tu boleto para comprobar</h6>
+                  <select
+                    name="tipoSorteo"
+                    id="tipoSorteo"
+                    class="selectSorteo"
+                  >
+                    <option value="euromillones">Euromillones</option>
+                    <option value="loteria">Lotería Nacional</option>
+                    <option value="primitiva">Primitiva</option>
+                  </select>
+                </div>
+                <div class="formRight">
+                  <h6>2. Escribe tus números</h6>
+                  <input type="number" name="number1" id="number1" class="numberSorteo" minlength="1" maxlength="2" required/>
+                  <input type="number" name="number2" id="number2" class="numberSorteo" minlength="1" maxlength="2" required/>
+                  <input type="number" name="number3" id="number3" class="numberSorteo" minlength="1" maxlength="2" required/>
+                  <input type="number" name="number4" id="number4" class="numberSorteo" minlength="1" maxlength="2" required/>
+                  <input type="number" name="number5" id="number5" class="numberSorteo" minlength="1" maxlength="2" required/>
 
-                <button class="btnComprobar m-2 " id="btnComprobar"><i class="bi bi-search"></i> Comprobar boleto</button>
-              </div>
+                  <button type="submit" class="btnComprobar m-2" id="btnComprobar">
+                    <i class="bi bi-search"></i> Comprobar boleto
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
 
           <div class="headRight">
             <div class="boxNumber">
               <i class="bi bi-award colorPrimario tamañoIconos"></i>
-              <h4 class="colorPrimario  ">Bote destacado de la semana</h4>
-              <h2 >124.000.000 €</h2>
+              <h4 class="colorPrimario">Bote destacado de la semana</h4>
+              <h2>124.000.000 €</h2>
             </div>
           </div>
         </div>
@@ -186,7 +194,7 @@
       </section>
     </main>
 
-    <footer class=" pie fondoPrimario">
+    <footer class="pie fondoPrimario">
       <a href="" class="text-light p-5">Privacidad y Cookies</a>
     </footer>
 

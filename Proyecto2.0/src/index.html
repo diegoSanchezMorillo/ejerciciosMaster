@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <!-- Librería oficial de Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Tu Lotería</title>
+  </head>
+  <body>
+    <!-- Comienza el menú-->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="./img/logo.svg" alt="Logo" class="logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-end fondoPrimario"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Fin del menú-->
+
+    <main>
+      <section class="principalHead fondoPrimario">
+        <div class="container containerHead">
+          <div class="headLeft">
+            <h1>Comprueba tus números de lotería al instante</h1>
+            <p>La forma más segura de comprobar tus boletos desde casa</p>
+            <div class="boxForm">
+              <form action="" id="formBoletos">
+                <div class="formLeft">
+                  <h6>1. Introduce tu boleto para comprobar</h6>
+                  <select
+                    name="tipoSorteo"
+                    id="tipoSorteo"
+                    class="selectSorteo"
+                  >
+                    <option value="euromillones">Euromillones</option>
+                    <option value="loteria">Lotería Nacional</option>
+                    <option value="primitiva">Primitiva</option>
+                  </select>
+                </div>
+                <div class="formRight">
+                  <h6>2. Escribe tus números</h6>
+                  <input type="number" name="number1" id="number1" class="numberSorteo" minlength="1" maxlength="2" required/>
+                  <input type="number" name="number2" id="number2" class="numberSorteo" minlength="1" maxlength="2" required/>
+                  <input type="number" name="number3" id="number3" class="numberSorteo" minlength="1" maxlength="2" required/>
+                  <input type="number" name="number4" id="number4" class="numberSorteo" minlength="1" maxlength="2" required/>
+                  <input type="number" name="number5" id="number5" class="numberSorteo" minlength="1" maxlength="2" required/>
+
+                  <button type="submit" class="btnComprobar m-2" id="btnComprobar">
+                    <i class="bi bi-search"></i> Comprobar boleto
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="headRight">
+            <div class="boxNumber" id="boxNumber">
+              <i class="bi bi-award colorPrimario tamañoIconos"></i>
+              <h4 class="colorPrimario">Bote destacado de la semana</h4>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container boxSecundary pt-5 pb-5">
+        <div class="boxTitles">
+          <p class="colorPrimario textoCentrado">Tus sorteos favoritos</p>
+          <h2 class="colorSecundario textoCentrado">
+            Soporte completo para los principales sorteos
+          </h2>
+          <p class="subtitulo textoCentrado pb-4">
+            Analizamos las bases de datos oficiales al instante para ofrecerte
+            un veredicto fiable e inmediato.
+          </p>
+        </div>
+
+        <div class="boxTargets">
+          <div class="boxtarget">
+            <i class="bi bi-star colorPrimario"></i>
+            <p class="subtitulo">Lotería Nacional</p>
+            <p>
+              Comprobación de décimos de Jueves y Sábado. Resultados históricos
+              completos y alertas automáticas de premios.
+            </p>
+          </div>
+          <div class="boxtarget fondoPrimario">
+            <i class="bi bi-globe colorPrimario"></i>
+            <p class="subtitulo text-light">Euromillones</p>
+            <p class="text-light">
+              Verifica tus apuestas sencillas o múltiples de Euromillones, el
+              millón y los códigos de lluvia de estrellas europeos.
+            </p>
+          </div>
+          <div class="boxtarget">
+            <i class="bi bi-lightning-charge colorPrimario"></i>
+            <p class="subtitulo">La primitiva</p>
+            <p>
+              Comprueba al instante tu boleto de La Primitiva, incluyendo el
+              número complementario y el Joker asociado.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container boxSecundary pt-5 pb-5">
+        <div class="boxTitles">
+          <p class="colorPrimario textoCentrado">Tus sorteos favoritos</p>
+          <h2 class="colorSecundario textoCentrado">
+            Soporte completo para los principales sorteos
+          </h2>
+          <p class="subtitulo textoCentrado">
+            Analizamos las bases de datos oficiales al instante para ofrecerte
+            un veredicto fiable e inmediato.
+          </p>
+        </div>
+
+        <div class="boxTargets">
+          <div class="boxtarget textoCentrado">
+            <i class="bi bi-justify colorPrimario tamañoIconos"></i>
+            <p class="subtitulo mt-5">1. Elige el sorteo</p>
+            <p>
+              Selecciona el juego que deseas comprobar en nuestro menú
+              desplegable de opciones.
+            </p>
+          </div>
+          <div class="boxtarget textoCentrado">
+            <i class="bi bi-pencil colorPrimario tamañoIconos"></i>
+            <p class="subtitulo mt-5">2. Introduce tus números</p>
+            <p>
+              Digita tu combinación jugada de forma manual o escanea el código
+              de barras si usas el móvil.
+            </p>
+          </div>
+          <div class="boxtarget textoCentrado">
+            <i class="bi bi-gift colorPrimario tamañoIconos"></i>
+            <p class="subtitulo colorSecundario mt-5">
+              3. Descubre si has ganado
+            </p>
+            <p>
+              Calculamos el desglose exacto de tu premio en base al escrutinio
+              oficial del sorteo de forma segura.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="pie fondoPrimario">
+      <a href="" class="text-light p-5">Privacidad y Cookies</a>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="../dist/js/script.js"></script>
+    <script type="module" src="../dist/js/scriptComprobar.js"></script>
+  </body>
+</html>

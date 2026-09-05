@@ -1,0 +1,182 @@
+
+/*Colores*/
+
+.fondoPrimario{
+    background-color: #0C1B33;
+}
+.fondoSecundario{
+    background-color: white;
+}
+
+.colorPrimario{
+    color: goldenrod;
+}
+
+.colorSecundario{
+    color: #0C1B33;
+}
+
+.colorTerciario{
+    color: white;
+}
+
+/*Alineamientos letras*/
+
+.textoCentrado{
+    text-align: center;
+}
+
+/*Tamaños*/
+
+.subtitulo{
+    font-size: clamp(1em, 1vw,1.5em);
+}
+
+.tamañoIconos{
+    font-size:3em ;
+}
+
+/*Menú*/
+/*Barra de navegación*/
+.navbar{
+    background-color: #0C1B33;
+    border-bottom: 1px solid white;
+}
+
+
+/*Elementos del menú*/
+.logo{
+    height:3em;
+}
+
+.logo:hover{
+    transform: scale(1.05);
+}
+
+.nav-link{
+    color: white;
+    font-weight: 600;
+}
+
+.nav-link:hover{
+    color: goldenrod;
+}
+
+/*Main*/
+
+.containerHead{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    padding-top: 8em;
+}
+
+.headLeft{
+    padding: 4rem;
+    color: white;
+}
+
+.boxForm{
+    background-color: white;
+    border-radius: 1em;
+    color: black;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+}
+
+.headRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxNumber{
+    border: 1px solid goldenrod;
+    border-radius: 1em;
+    padding: 5em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*formulario tipo de sorteo*/
+
+.formLeft{
+    flex: 50%;
+}
+.formRight{
+    flex: 50%;
+    
+}
+
+.selectSorteo{
+    width: 100%;
+    border-radius: 2em;
+    padding: 0.5em;
+    border: inherit;
+}
+
+.numberSorteo{
+    width: 18%;
+    border: 1px solid goldenrod;
+    border-radius: 0.5em;
+}
+
+.btnComprobar{
+    background-color: goldenrod;
+    border: inherit;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    float:right;
+}
+
+/*Segunda sección*/
+
+.boxTargets{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.boxtarget{
+    padding: 3em;
+    border-radius: 2em;
+}
+
+/*footer*/
+
+.pie{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 992px) {
+
+.boxForm{
+    flex-wrap:nowrap;
+}
+
+.containerHead{
+    flex-direction:row;
+    padding-top: 10em;
+    padding-bottom: 10em;
+}
+
+.headLeft{
+    flex: 60%;
+}
+
+.headRight{
+    flex: 40%;
+}
+
+.boxTargets{
+    
+    flex-wrap:nowrap;
+    
+}
+
+}
